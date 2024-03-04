@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário de Cadastro</title>
+  </head>
+  <body>
+
+    <!-- Metodo post envia dados para a pagina sem que eles sejam mostrados na URL, diferente do metodo GET -->
+    <!-- Autocomplete é a opção de salvar senha, onde cada vez que o usuario logar ele tenha os dados salvo para um login automatico -->
+    <form name="signup" autocomplete="on" target="_blank" method="post" action="#"> <!-- ACTION = para onde os dados vão?  -->
+      Nome: <input type="text" name="name" /><br />
+      Idade: <input type="number" name="age" /><br />
+      Senha: <input type="password" name="password" /><br />
+      <button type="submit">Enviar</button>
+    </form>
+    <br>
+    <form >
+      <label>Digite Aqui:</label> <input type="text"/> <br>
+      <label>Digite sua idade:</label><input type="number" min="0" max="99"><br>
+      <label>Range:</label><input type="range"><br>
+      <label>Color:</label><input type="color"><br>
+      <label>E-mail:</label><input type="email"><br>
+      <label>URL:</label><input type="url"><br>
+      <label>Botão:</label><input type="submit" value="Enviar"><br>
+      <label>Date:</label><input type="date"><br>
+      <label>CheckBox:</label><input type="checkbox"><input type="checkbox"><br>
+      <!-- radio só aceita um ou outro, diferente do CheckBox, porem tem que ter -->
+      <label>Radio:</label><input type="radio" name="aceita"><input type="radio" name="aceita"><br>
+      <label>File:</label><input type="file"><br>
+    </form>
+    <br>
+    <br>
+    <h1>Você selecionou: Pizza de Calabresa!</h1>
+    <p>Quais opcionais adicionar?</p>
+
+    <!-- o opcional esta com [] para o backing end entender que se trata de uma lista, caso contrario só irá armazenar o ultimo elemento selecionado -->
+    <!-- O value é o valor que o banco de dados irá receber. -->
+
+    <form method="get">
+      <label><input type="checkbox" name="opcional[]" value="calabresa">+ calabresa</label><br>
+      <label><input type="checkbox" name="opcional[]" value="queijo">+ queijo</label><br>
+      <label><input type="checkbox" name="opcional[]" value="cebola">+ cebola</label><br>
+      <label><input type="checkbox" disabled name="opcional[]" value="azeitona">+ azeitona</label><br>
+  
+      <p>Borda recheada?</p>
+      <label><input type="radio" name="borda" value="sim">Sim</label>
+      <label><input type="radio" name="borda" value="nao">Não</label><br>
+  
+      <p>Bebida</p>
+      <label><input type="radio" name="bebida" value="agua">Agua</label><br>
+      <label><input type="radio" name="bebida" value="refrigerante">Refrigerante</label><br>
+      <label><input type="radio" name="bebida" value="suco">Suco</label><br>
+      <label><input type="radio" name="bebida" value="nenhum">Nenhum</label><br>
+  
+      <button type="submit">Enviar pedido</button>
+    </form>
+    <br><br>
+    <form onsubmit="" method="get">
+      <label>Nome</label><input type="text" name="name"><br>
+      <label>Cargo:</label>
+      <select name="role">
+        <option value="">Selecione o cargo</option><br>
+        <option value="gerente">Gerente</option>
+        <option value="diretor">Diretor</option>
+        <option value="presidente">Presidente</option>
+      </select>
+      <br>
+      <label>Mensagem</label>
+      <textarea name="message"></textarea>
+
+    
+    </form>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .row {
+        margin: 5px;
+        
+      }
+      label {
+        width: 100px;
+        display: inline-block;
+        text-align: right;
+        padding-right: 5px;
+      }
+      fieldset{
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Formulário de Cadastro</h1>
+    <fieldset>
+        <legend>Dados Pessoais</legend>
+        <div class="row">
+            <label>Nome: </label><input type="text" />
+            <label>Profissão: </label><input type="text" />
+        </div>
+        <div class="row">
+            <label>E-mail: </label><input type="text" />
+            <label>Empresa: </label><input type="text" />
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Informações de Endereço</legend>
+        <div class="row">
+            <label>Endereço: </label><input type="text" />
+            <label>Número: </label><input type="text" />
+        </div>
+        <div class="row">
+            <label>Bairro</label><input type="text">
+        </div>
+        <div class="row">
+            <label>Cidade/UF</label><input type="text">
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Informações para Contato</legend>
+        <div class="row">
+            <label>Celular</label><input type="text">
+            <label>Whatsapp</label><input type="text">
+        </div>
+        <div class="row">
+            <label>Linkedin</label><input type="text">
+            <label>Github</label><input type="text">
+        </div>
+    </fieldset>    
+    <button>Limpar</button>
+    <button>Enviar Forumlário</button>
+  </body>
+</html>
